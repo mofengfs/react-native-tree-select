@@ -6,7 +6,7 @@ import { breadthFirstRecursion } from '../utils/menutransform';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(0,0,0,0)',
   },
   textName: {
     fontSize: 14,
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingBottom: 20,
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(0,0,0,0)',
   },
   collapseIcon: {
     width: 0,
@@ -187,7 +187,7 @@ export default class TreeSelect extends Component {
           <TouchableOpacity onPress={(e) => this._onPressCollapse({ e, item })} >
             <View style={{
               flexDirection: 'row',
-              backgroundColor: !leafCanBeSelected && isCurrentNode ? selectedBackgroudColor || '#FFEDCE' : backgroudColor || '#fff',
+              backgroundColor: !leafCanBeSelected && isCurrentNode ? selectedBackgroudColor || 'rgba(0,0,0,0)' : backgroudColor || 'rgba(0,0,0,0)',
               marginBottom: 2,
               height: 30,
               alignItems: 'center'
@@ -220,7 +220,7 @@ export default class TreeSelect extends Component {
       <TouchableOpacity onPress={(e) => this._onClickLeaf({ e, item })}>
         <View style={{
           flexDirection: 'row',
-          backgroundColor: isCurrentNode ? selectedBackgroudColor || '#FFEDCE' : backgroudColor || '#fff',
+          backgroundColor: isCurrentNode ? selectedBackgroudColor || 'rgba(0,0,0,0)' : backgroudColor || 'rgba(0,0,0,0)',
           marginBottom: 2,
           height: 30,
           alignItems: 'center'
